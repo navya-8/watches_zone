@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>E Commerce Watch</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= render 'home/header' %>
+
+    <h2 id="a1">
+      <div class="layout_area"> 
+        <!-- slider section -->
+        <section class="slider_section position-relative">
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="container">
+              <div class="row">  
+                <div class="col-md-5">
+                  <div class="slider_img-box">
+                    <div>
+                      <img src="/assets/watch.png" alt="" class="" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <div class="slider_item-detail">
+                    <div>
+                      <h1>
+                        Stylish watches
+                      </h1>
+                      <h6>
+                       “Learn to enjoy every minute of your life. Be happy now. Don’t wait for something outside of yourself to make you happy in the future. Think how really precious is the time you have to spend, whether it’s at work or with your family. Every minute should be enjoyed and savored.” 
+                      </h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="custom_carousel-control">
+              <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+        </section>
+        <!-- end slider section -->
+      </div>
+    </h2>
+
+    <h2 id="a2">
+      <div class="bg">
+        <!-- about section -->
+        <section class="about_section layout_padding">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-5 offset-md-2">
+                <div class="about_detail-box">
+                  <h3 class="custom_heading ">
+                    About our watch
+                 </h3>
+                   <p class="">
+                    A wristwatch is designed to be worn around the wrist, attached by a watch strap or other type of bracelet, including metal bands, leather straps or any other kind of bracelet. A pocket watch is designed for a person to carry in a pocket, often attached to a chain. 
+                   </p>
+                   <div>
+                  <a href="">
+                      Read More
+                  </a>
+               </div>
+              </div>
+              </div>
+              <div class="col-md-4">
+                <div class="about_img-box">
+                  <img src="/assets/about.png" alt="">
+              </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end about section -->
+      </div>
+    </h2>
+
+    <h2 id="a3">
+      <!-- brand section -->
+      <section class="brand_section layout_padding2">
+        <div class="container">
+          <div class="brand_heading">
+            <h3 class="custom_heading">
+              Our watch brands
+            </h3>
+            <p class="font-weight-bold">
+              It is a brand based in india renowned for its luxuary watches and fashion accessories 
+            </p>
+          </div>
+        </div>
+        <div class="container-fluid brand_item-container">
+          <div class="brand_item-box">
+            <div class="brand_img-box  item-1">
+              <a href="">
+                View More
+              </a>
+            </div>
+            <div class="brand_detail-box">
+              <h5>
+                $<span> 375 </span>
+              </h5>
+              <h6 class="">
+                Fashion Casual Top Brand Leather Watch Men Vintage Wrist Watch
+              </h6>
+            </div>
+          </div>
+          <div class="brand_item-box">
+            <div class="brand_img-box  item-2">
+              <a href="">
+                View More
+              </a>
+            </div>
+            <div class="brand_detail-box">
+              <h5>
+                $<span> 550 </span>
+              </h5>
+              <h6 class="">
+                Ladies Wrist Watches Dress Gold Watch Women Crystal Diamond 
+              </h6>
+            </div>
+          </div>
+          <div class="brand_item-box">
+            <div class="brand_img-box  item-3">
+              <a href="">
+                View More
+              </a>
+            </div>
+            <div class="brand_detail-box">
+              <h5>
+                $<span> 455 </span>
+              </h5>
+              <h6 class="">
+                Swiss fashion mlitary sport watch woven nylon with men calendar sport
+              </h6>
+            </div>
+          </div>
+          <div class="brand_item-box">
+            <div class="brand_img-box  item-4">
+              <a href="">
+                View More
+              </a>
+            </div>
+            <div class="brand_detail-box">
+              <h5>
+                $<span> 279 </span>
+              </h5>
+              <h6 class="">
+                Workwear Watch with Grey Dial Leather Strap
+              </h6>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end brand section -->
+    </h2>
+
+    <%= render 'home/main_working' %>
+
+    <h2 id="a3">
+      <div class="bg">
+        <!-- why section -->
+        <section class="why_section layout_padding">
+          <div class="container">
+            <h3 class="custom_heading">
+              Why choose Us
+            </h3>
+            <p class="font-weight-bold">
+              It is a brand based in india renowned for its luxuary watches and fashion accessories
+            </p>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="img_box">
+                  <img src="/assets/feature-1.png" alt="">
+                </div>
+                <div class="detail_box">
+                  <h5>
+                    Fast Delivery
+                  </h5>
+                  <p>
+                    variations of passages of Lorem Ipsum available, but the majority have suffered
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="img_box">
+                  <img src="/assets/feature-2.png" alt="">
+                </div>
+                <div class="detail_box">
+                  <h5>
+                    Free Shiping
+                  </h5>
+                  <p>
+                    variations of passages of Lorem Ipsum available, but the majority have suffered
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="img_box">
+                  <img src="/assets/feature-3.png" alt="">
+                </div>
+                <div class="detail_box">
+                  <h5>
+                    Best Quality
+                  </h5>
+                  <p>
+                    variations of passages of Lorem Ipsum available, but the majority have suffered
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="img_box">
+                  <img src="/assets/feature-4.png" alt="">
+                </div>
+                <div class="detail_box">
+                  <h5>
+                    24x7 Customer support
+                  </h5>
+                  <p>
+                    variations of passages of Lorem Ipsum available, but the majority have suffered
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end why section -->
+      </div>
+    </h2>
+
+    <h2 id="a4">
+      <!-- info section -->
+      <section class="info_section layout_padding">
+        <div class="container">
+          <div class="info_items">
+            <a href="">
+              <div class="item ">
+                <div class="img-box box-1">
+                  <img src="" alt="">
+                </div>
+                <div class="detail-box">
+                  <p>
+                    Rajahmundry, Andhra Pradesh
+                  </p>
+                </div>
+              </div>
+            </a>
+            <a href="">
+              <div class="item ">
+                <div class="img-box box-2">
+                  <img src="" alt="">
+                </div>
+                <div class="detail-box">
+                  <p>
+                    +91 6300724133
+                  </p>
+                </div>
+              </div>
+            </a>
+            <a href="">
+              <div class="item ">
+                <div class="img-box box-3">
+                  <img src="" alt="">
+                </div>
+                <div class="detail-box">
+                  <p>
+                    nandhininavya88@gmail.com
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- end info_section -->
+    </h2>
+           
+    <%= render 'home/footer' %>
+
+    <!-- <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script> -->
+  </body>
+</html>

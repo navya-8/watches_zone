@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <style>
+            table {
+            border-collapse: collapse;
+            width: 50%;
+            }
+
+            th, td {
+            text-align: left;
+            padding: 15px;
+            }
+
+            tr:nth-child(even){background-color: #E1C2EC}
+
+            th {
+            background-color: #347C8D;
+            color: white;
+            }
+
+            body {
+                font-family: "Poppins", sans-serif;
+                color: #0c0c0c;
+                background-color: #ffffff;
+                overflow-x: hidden;
+            }
+
+        </style>
+    </head>
+    <body>
+        &emsp;<h2>Your order has been placed.</h2>
+    </br>
+      
+        <h4>your order details are:</h4>
+        <table>
+           <tr>
+        <th>Quantity</th>
+        <th>Product</th>
+        <th>Amount</th>
+        
+    </tr>
+     <tr>
+                <%= render @cart.line_items %>
+            </tr>
+            <tr>
+               <td colspan="2">Total</td>
+                <td class="total_cell">₹<%= @cart.total_price%></td>
+            </tr>                 
+        </table>
+        <h2>Thank you for shopping.</h2>
+    </body>
+</html>

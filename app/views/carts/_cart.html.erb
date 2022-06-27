@@ -1,0 +1,63 @@
+<% unless cart.line_items.empty? %>
+<h3>Your Cart</h3>
+<style>
+
+
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #E1C2EC;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #347C8D;
+  color: white;
+}
+</style>
+
+
+
+<table id="customers">
+
+	<tr>
+		<th>Quanitity</th>
+		<th>Product</th>
+		<th>Amount</th>
+		
+	</tr>
+	<%= render(cart.line_items) %>
+	<tr>
+		<td colspan="2">Total</td>
+		<td class="total_cell"><%= number_to_currency(cart.total_price)  %></td>
+	</tr>
+</table></br>
+<% session[:amount] = "₹ #{cart.total_price}" %> 
+
+<div class="btn btn-info btn-sm">               
+<%= button_to 'Empty Cart', cart, class:"p-0 ml-2 mr-2 pr-3", :method => :delete, :confirm => 'Are you sure?' %>
+</div>
+
+<p></br>
+<div class="btn btn-warning btn-sm">               		
+	<%= link_to "Continue Shopping",:controller=>"gallery",:action=>"index" %> </div> | <div class="btn btn-danger btn-sm">               
+
+	<% if user_signed_in? %>
+	<%= link_to "Checkout" ,:controller=>"gallery",:action=>"checkout" %>
+		<% else %>
+		<%= link_to "Checkout",new_user_session_path,:controller=>"admin",:action=>"login" %></div>
+		<% end %>
+	</div>
+	</p>
+<% end %>

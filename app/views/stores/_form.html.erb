@@ -1,0 +1,63 @@
+<%= form_with(model: store, local: true) do |form| %>
+  <% if store.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(store.errors.count, "error") %> prohibited this store from being saved:</h2>
+
+      <ul>
+      <% store.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row">
+ <div class="col-md-6">
+ <div class="form-group">
+    <%= form.label :name %>
+    <div class="form">
+    <%= form.text_field :name %>
+  </div></div></div></div>
+
+  <div class="row">
+ <div class="col-md-6">
+ <div class="form-group">
+    <%= form.label :price %>
+    <div class="form">
+    <%= form.text_field :price %>
+ </div></div></div></div>
+
+  <div class="row">
+ <div class="col-md-6">
+ <div class="form-group">
+    <%= form.label :colour %>
+    <div class="form">
+    <%= form.text_field :colour %>
+  </div></div></div></div>
+
+  <div class="row">
+ <div class="col-md-6">
+ <div class="form-group">
+    <%= form.label :brand %>
+    <div class="form">
+    <%= form.text_field :brand %>
+  </div></div></div></div>
+
+  <div class="row">
+ <div class="col-md-6">
+ <div class="form-group">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div></div></div>
+  
+  <div class="field">
+    <%= form.label :product_image %>
+    <%= form.file_field :product_image %>
+  </div>
+                      
+    <div class="btn btn-info btn-sm">                                     
+    <div class="actions">
+    <%= form.submit class:"p-0 pt-1 pb-0 pl-1 pr-1 mb-0 mt-1" %>
+  </div></div>
+  
+<% end %>

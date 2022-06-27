@@ -1,0 +1,31 @@
+<section class="contact_section layout_padding">
+  <h2 class="custom_heading text-center">
+    NOW START YOUR COLLECTION
+  </h2>
+  <div class="container mt-5 pt-5">
+    <h2 id="olll">
+      <% if user_signed_in? %>
+      <% $text=current_user.email%>
+      <center>
+        Logged in as <strong><%= current_user.email %></strong>.<br></br>
+    
+        <%= link_to 'EDIT PROFILE', edit_user_registration_path, :class => 'navbar-link text-light' %> |
+        <%= link_to "SIGN OUT", destroy_user_session_path, method: :delete, :class => 'navbar-link text-light'  %>  
+      </center>
+      <% else %> 
+      <center>
+        <%= link_to "SIGN UP", new_user_registration_path, :class => 'navbar-link text-light'  %> |
+        <%= link_to "SIGN IN", new_user_session_path, :class => 'navbar-link text-light'   %><br>
+      </center>
+      <% end %>
+      </br>
+      <% if notice %>
+        <p class="alert alert-success"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+        <p class="alert alert-danger"><%= alert %></p>
+      <% end %>
+
+      <%= yield %>
+  </div>
+</section>

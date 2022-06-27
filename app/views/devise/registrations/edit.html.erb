@@ -1,0 +1,63 @@
+<h2>Edit <%= resource_name.to_s.humanize %></h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+   <div class="row">
+ <div class="col-md-6">
+ <div class="form-group">
+   <%= f.label :email %><br />
+   <div class="form">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div></div></div></div>
+
+
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %>
+
+   <div class="row">
+ <div class="col-md-6">
+ <div class="form-group">
+   <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+    <% if @minimum_password_length %>
+      <br />
+      <em><%= @minimum_password_length %> characters minimum</em>
+    <% end %>
+     <div class="form">
+    <%= f.password_field :password, autocomplete: "new-password" %>
+  
+  </div></div></div></div>
+
+
+   <div class="row">
+ <div class="col-md-6">
+ <div class="form-group">
+   <%= f.label :password_confirmation %><br />
+   <div class="form">
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+ </div></div></div></div>
+
+
+   <div class="row">
+ <div class="col-md-6">
+ <div class="form-group">
+   <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+   <div class="form">
+    <%= f.password_field :current_password, autocomplete: "current-password" %>
+  </div></div></div></div>
+
+<div class="btn btn-info btn-sm">               
+  <div class="actions">
+    <%= f.submit "UPDATE", class:"p-0 pb-0 pt-2 mr-2 ml-0" %>
+  </div></div>
+<% end %>
+<br>
+<center><p>Unhappy?</p></center>
+<center>
+<div class="btn btn-danger btn-sm">               
+ <%= button_to "CANCEL MY ACCOUNT", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class:"p-0 ml-1 mr-1 pr-1" %></div></br>
+</center>
+</br>
+<div class="btn btn-primary btn-sm">               
+<%= link_to "Back", :back , class:"text-white" %></div>
